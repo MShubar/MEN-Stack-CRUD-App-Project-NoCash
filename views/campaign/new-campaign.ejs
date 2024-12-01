@@ -1,0 +1,64 @@
+<%- include('../partials/navbar.ejs') %>
+
+<div
+  class="container d-flex justify-content-center align-items-center vh-70 fade-in"
+>
+  <div
+    class="card shadow-lg p-4 scale-up"
+    style="max-width: 500px; border-radius: 15px"
+  >
+    <h1 class="text-center mb-4 fw-bold text-primary slide-down">
+      Create a New Campaign
+    </h1>
+
+    <form id="newCampaign" action="/campaigns/new" method="POST">
+      <div class="form-floating mb-3 slide-up">
+        <input
+          type="text"
+          name="campaignName"
+          id="campaignName"
+          class="form-control"
+          placeholder="Campaign Name"
+          aria-label="Enter the campaign name"
+          required
+        />
+        <label for="campaignName">Campaign Name</label>
+      </div>
+
+      <div class="form-floating mb-3 slide-up-delayed">
+        <input
+          type="number"
+          name="GoalAmount"
+          id="GoalAmount"
+          class="form-control"
+          placeholder="Amount Goal"
+          aria-label="Enter the goal amount"
+          required
+        />
+        <label for="GoalAmount">Amount Goal</label>
+      </div>
+
+      <div class="form-floating mb-3 slide-up-delayed">
+        <textarea
+          name="description"
+          id="description"
+          class="form-control"
+          placeholder="Description"
+          style="height: 100px"
+          aria-label="Enter the campaign description"
+          required
+        ></textarea>
+        <label for="description">Campaign Description</label>
+      </div>
+
+      <button
+        class="btn btn-primary w-100 py-2 fw-bold hover-bounce"
+        type="submit"
+      >
+        Start Campaign
+      </button>
+    </form>
+  </div>
+</div>
+
+<%- include('../partials/footer.ejs') %>

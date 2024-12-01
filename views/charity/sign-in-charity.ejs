@@ -1,0 +1,59 @@
+<%- include('../partials/navbar.ejs') %>
+
+<div
+  class="container d-flex justify-content-center align-items-center vh-70 fade-in"
+>
+  <div
+    class="card shadow-lg p-4 scale-up"
+    style="max-width: 400px; border-radius: 15px"
+  >
+    <h1 class="text-center mb-4 fw-bold text-primary slide-down">
+      Welcome Back
+    </h1>
+    <p class="text-center text-muted mb-4 slide-down-delayed">
+      Please sign in to continue.
+    </p>
+    <form id="charitySignIn" action="/charity/sign-in" method="post">
+      <div class="form-floating mb-3 slide-up">
+        <input
+          type="text"
+          name="charityName"
+          id="charityName"
+          class="form-control"
+          placeholder="Charity Name"
+          required
+        />
+        <label for="charityName">Charity Name</label>
+      </div>
+
+      <div class="form-floating mb-3 slide-up-delayed">
+        <input
+          type="password"
+          name="password"
+          id="password"
+          class="form-control"
+          placeholder="Password"
+          required
+        />
+        <label for="password">Password</label>
+      </div>
+
+      <button
+        class="btn btn-primary w-100 py-2 fw-bold hover-bounce"
+        type="submit"
+      >
+        Sign In
+      </button>
+
+      <div class="text-center mt-3 fade-in-delayed">
+        <small class="text-muted">
+          Don’t have an account?
+          <a href="/charity/sign-up" class="text-primary fw-semibold"
+            >Sign up</a
+          >
+        </small>
+      </div>
+    </form>
+  </div>
+</div>
+<%- include('../partials/footer.ejs') %>

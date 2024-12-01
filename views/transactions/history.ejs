@@ -1,0 +1,56 @@
+<%- include('../partials/navbar.ejs') %>
+<div class="container mx-auto mt-5">
+  <h2 class="text-center text-2xl font-bold mb-5">Transaction History</h2>
+  <% if (account) { %>
+  <div class="row">
+    <% transactions.forEach(transaction => { %>
+    <div class="col-md-6 mb-4">
+      <div class="card border-primary shadow-sm">
+        <div class="card-body">
+          <p class="mb-2">
+            <strong>Status:</strong>
+            <% if (transaction.senderAccountId._id.toString() ===
+            account._id.toString()) { %>
+            <span class="text-danger">Sent</span>
+            <% } else if (transaction.receiverAccountId._id.toString() ===
+            account._id.toString()) { %>
+            <span class="text-success">Received</span>
+            <% } %>
+          </p>
+          <% if (transaction.senderAccountId._id.toString() ===
+          account._id.toString()) { %>
+          <p class="mb-2 text-muted">
+            <strong>Receiver:</strong> <%=
+            transaction.receiverAccountId.username %>
+          </p>
+          <% } else if (transaction.receiverAccountId._id.toString() ===
+          account._id.toString()) { %>
+          <p class="mb-2 text-muted">
+            <strong>Sender:</strong> <%= transaction.senderAccountId.username %>
+          </p>
+          <%}%>
+          <p class="mb-2">
+            <strong>Amount:</strong> <%= transaction.amount %> BD
+          </p>
+          <p class="mb-2">
+            <strong>Date & Time:</strong>
+            <%= new Date(transaction.createdAt).toLocaleString() %>
+          </p>
+          <a
+            href="/transactions/<%= transaction._id %>"
+            class="btn btn-primary btn-sm mt-2"
+          >
+            View Details
+          </a>
+        </div>
+      </div>
+    </div>
+    <% }); %>
+  </div>
+  <% } else { %>
+  <h2 class="text-center text-danger">
+    Please log in to create a transaction.
+  </h2>
+  <% } %>
+</div>
+<%- include('../partials/footer.ejs') %>

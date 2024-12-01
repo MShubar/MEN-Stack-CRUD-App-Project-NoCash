@@ -1,0 +1,97 @@
+1. Home Page
+Features:
+Overview of the NoCash service.
+Key benefits of using NoCash (e.g., convenient change management, loyalty rewards).
+Call-to-action buttons (e.g., "Get Started," "Learn More").
+Sections:
+User testimonials or reviews.
+Partner logos (banks, stores).
+2. User Dashboard
+Features:
+Overview of account balance (e.g., total change collected).
+Recent transactions.
+Access to rewards/gift cards.
+Options:
+Button to withdraw to bank account.
+Link to manage loyalty points.
+3. Transaction Management Page
+Features:
+Detailed history of all transactions (date, amount, merchant).
+Filters (date range, type of transaction).
+Actions:
+Export transaction history (PDF/CSV).
+4. Bank Account Integration Page
+Features:
+Link bank accounts for direct deposit of cash change.
+Security measures (e.g., two-factor authentication).
+Sections:
+FAQs about bank integrations.
+Supported banks list.
+5. Gift Cards and Rewards Page
+Features:
+Browse available gift cards (with categories).
+Redeem points or cash for gift cards.
+Partnered loyalty programs (e.g., retail, dining).
+Sections:
+Personalized recommendations based on usage.
+6. QR Code/Barcode Page
+Features:
+Display user-specific QR code or barcode for scanning at merchant POS systems.
+Instructions on how to use NoCash in stores.
+7. Merchants and Offers Page
+Features:
+List of participating merchants.
+Current promotions or offers from merchants.
+Sections:
+Map or search feature for nearby participating stores.
+8. Profile Settings Page
+Features:
+Update personal details (name, email, phone number).
+Change PIN/password.
+Enable/disable notifications.
+Sections:
+Account preferences (e.g., preferred payout method).
+9. Help & Support Page
+Features:
+Contact form for support.
+Live chat option (if applicable).
+FAQs (e.g., "How does NoCash work?", "What if I lose my account?").
+Sections:
+Tutorials (videos, guides).
+Feedback submission.
+10. Admin Dashboard (For Management)
+Features:
+User management (view/edit/delete accounts).
+Transactions monitoring and issue resolution.
+Add/remove merchants and partners.
+Analytics:
+User activity trends.
+Merchant activity and revenue share.
+11. Onboarding Page
+For New Users:
+Guided steps to set up an account.
+Integration of payment method/bank account.
+Tutorial on using the app.
+Sections:
+Overview of privacy and security policies.
+12. Notifications Page
+Features:
+View recent notifications (e.g., successful cash deposit, rewards updates).
+Enable/disable notification preferences.
+13. About Us Page
+Features:
+Mission and vision of NoCash.
+Team introduction.
+Press/media mentions.
+Sections:
+Contact information for business inquiries.
+14. Terms & Privacy Page
+Features:
+Detailed terms of service.
+Privacy policy outlining data usage.
+Sections:
+Frequently asked questions about user data.
+15. Error Pages (404/500)
+Features:
+User-friendly messages for missing or broken links.
+Call-to-action to return to Home/Dashboard.

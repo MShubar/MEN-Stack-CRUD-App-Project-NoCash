@@ -1,0 +1,54 @@
+<%- include('../partials/navbar.ejs') %>
+
+<div class="container my-5 justify-content-center align-items-center">
+  <h1 class="text-center fw-bold mb-4">Campaign Details</h1>
+  <div class="card shadow-sm p-4 mb-5">
+    <h2 class="text-primary">
+      <strong>Campaign Name: </strong><%= campaign.campaignName %>
+    </h2>
+    <p><strong>Description:</strong> <%= campaign.description %></p>
+
+    <p><strong>Donated Amount:</strong> <%= campaign.balance %>BD</p>
+    <p><strong>Goal Amount:</strong> <%= campaign.GoalAmount %>BD</p>
+    <p>
+      <strong>Charity Name:</strong>
+      <a href="/charity/<%= campaign.charityId._id %>">
+        <%= campaign.charityId.charityName %>
+      </a>
+    </p>
+  </div>
+
+  <form
+    id="newTransaction"
+    action="/campaigns/<%= campaign._id %>/donate"
+    method="POST"
+    class="justify-content-center align-items-center"
+  >
+    <div class="form-floating mb-3" style="animation: slide-up 1s ease-out">
+      <input
+        type="text"
+        name="donateAmount"
+        id="donateAmount"
+        class="form-control"
+        placeholder="Donate Amount"
+        required
+      />
+      <label for="donateAmount">Donate Amount</label>
+    </div>
+    <button
+      class="btn btn-primary w-100 py-2 fw-bold hover-bounce"
+      type="submit"
+      style="animation: bounce-in 1.2s ease"
+    >
+      Donate
+    </button>
+  </form>
+  <form action="/campaigns/delete/<%= campaign._id %>" method="POST">
+    <button type="submit">Delete</button>
+  </form>
+  <a href="/campaigns/edit/<%= campaign._id %>">
+    <button type="button">Edit Campaign</button>
+  </a>
+</div>
+
+<%- include('../partials/footer.ejs') %>

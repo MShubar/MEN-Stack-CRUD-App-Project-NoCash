@@ -1,0 +1,128 @@
+<%- include('../partials/navbar.ejs') %>
+
+<div
+  class="container d-flex justify-content-center align-items-center vh-70 fade-in"
+>
+  <div
+    class="card shadow-lg p-4 scale-up"
+    style="max-width: 500px; border-radius: 15px"
+  >
+    <h1 class="text-center mb-4 fw-bold text-primary slide-down">
+      Create new Charity
+    </h1>
+    <p class="text-center text-muted mb-4 slide-down-delayed">
+      Sign up to explore more features.
+    </p>
+    <form id="charitySignup" action="/charity/sign-up" method="POST">
+      <div class="form-floating mb-3 slide-up">
+        <input
+          type="text"
+          name="charityName"
+          id="charityName"
+          class="form-control"
+          placeholder="Charity Name"
+          required
+        />
+        <label for="charityName">Charity Name</label>
+      </div>
+
+      <div class="form-floating mb-3 slide-up-delayed">
+        <input
+          type="text"
+          name="RegistrationID"
+          id="RegistrationID"
+          class="form-control"
+          placeholder="Registration ID"
+          required
+        />
+        <label for="RegistrationID">Registration ID</label>
+      </div>
+      <div class="form-floating mb-3 slide-up-delayed">
+        <input
+          type="text"
+          name="Location"
+          id="Location"
+          class="form-control"
+          placeholder="Location"
+          required
+        />
+        <label for="Location">Location</label>
+      </div>
+
+      <div class="form-floating mb-3 slide-up-delayed">
+        <input
+          type="number"
+          name="PhoneNumber"
+          id="PhoneNumber"
+          class="form-control"
+          placeholder="Phone Number"
+          required
+        />
+        <label for="PhoneNumber">Phone Number</label>
+      </div>
+      <div class="form-floating mb-3 slide-up-delayed">
+        <input
+          type="text"
+          name="description"
+          id="description"
+          class="form-control"
+          placeholder="Phone Number"
+          required
+        />
+        <label for="description">Description</label>
+      </div>
+      <div class="form-floating mb-3 slide-up-delayed">
+        <input
+          type="text"
+          name="email"
+          id="email"
+          class="form-control"
+          placeholder="Email Address"
+          required
+        />
+        <label for="email">Email Address</label>
+      </div>
+
+      <div class="form-floating mb-3 slide-up">
+        <input
+          type="password"
+          name="password"
+          id="password"
+          class="form-control"
+          placeholder="Password"
+          required
+        />
+        <label for="password">Password</label>
+      </div>
+
+      <div class="form-floating mb-3 slide-up-delayed">
+        <input
+          type="password"
+          name="confirmPassword"
+          id="confirmPassword"
+          class="form-control"
+          placeholder="Confirm Password"
+          required
+        />
+        <label for="confirmPassword">Confirm Password</label>
+      </div>
+
+      <button
+        class="btn btn-primary w-100 py-2 fw-bold hover-bounce"
+        type="submit"
+      >
+        Sign Up
+      </button>
+
+      <div class="text-center mt-3 fade-in-delayed">
+        <small class="text-muted">
+          Already have an account?
+          <a href="/charity/sign-in" class="text-primary fw-semibold"
+            >Sign in</a
+          >
+        </small>
+      </div>
+    </form>
+  </div>
+</div>
+<%- include('../partials/footer.ejs') %>

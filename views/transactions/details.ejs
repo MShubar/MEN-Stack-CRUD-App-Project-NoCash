@@ -1,0 +1,40 @@
+<%- include('../partials/navbar.ejs') %>
+<div class="container mx-auto mt-5">
+  <div class="card border-primary shadow-sm">
+    <div class="card-header text-center text-primary">
+      <h3>Transaction Details</h3>
+    </div>
+    <% if (account) { %>
+    <div class="card-body">
+      <p class="mb-3">
+        <strong>Transaction ID:</strong> <%= transaction._id %>
+      </p>
+      <p class="mb-3">
+        <strong>Sender:</strong> <%= transaction.senderAccountId?.username ||
+        "Unknown" %>
+      </p>
+      <p class="mb-3">
+        <strong>Receiver:</strong> <%= transaction.receiverAccountId?.username
+        || "Unknown" %>
+      </p>
+      <p class="mb-3"><strong>Amount:</strong> <%= transaction.amount %> BD</p>
+      <p class="mb-3">
+        <strong>Date:</strong> <%= transaction.createdAt.toDateString() %>
+      </p>
+      <p class="mb-3">
+        <strong>Time:</strong> <%= transaction.createdAt.toLocaleTimeString() %>
+      </p>
+    </div>
+    <div class="card-footer text-center">
+      <a href="/transactions/history" class="btn btn-secondary"
+        >Back to History</a
+      >
+      <% } else { %>
+      <h2 class="text-center text-danger">
+        Please log in to create a transaction.
+      </h2>
+      <% } %>
+    </div>
+  </div>
+</div>
+<%- include('../partials/footer.ejs') %>

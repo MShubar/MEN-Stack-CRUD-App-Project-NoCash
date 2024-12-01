@@ -1,0 +1,39 @@
+<%- include('../partials/navbar.ejs') %>
+
+<div class="container my-5" style="border: 2px solid black">
+  <h1 class="text-center fw-bold mb-4">Charity Details</h1>
+  <div class="card shadow-sm p-4 mb-5">
+    <h2 class="text-primary">
+      <strong>Charity Name: </strong><%= charity.charityName %>
+    </h2>
+    <p><strong>Description:</strong> <%= charity.description %></p>
+    <p><strong>Contact Email:</strong> <%= charity.email %></p>
+    <p><strong>Total Raised:</strong> <%= charity.balance %> BD</p>
+    <p><strong>Phone Number:</strong> <%= charity.PhoneNumber %></p>
+  </div>
+
+  <h3 class="text-center fw-bold mb-3">Campaigns</h3>
+  <% if (campaigns.length > 0) { %>
+  <ul class="list-group">
+    <% campaigns.forEach(campaign => { %>
+    <a
+      href="/campaigns/<%= campaign._id %>"
+      class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+      style="border: 2px solid black"
+    >
+      <div>
+        <strong>Campaign Name:</strong> <br /><%= campaign.campaignName %>
+      </div>
+
+      <span class="badge bg-primary rounded-pill">
+        <%= campaign.balance %> BD / <%= campaign.GoalAmount %> BD</span
+      >
+    </a>
+    <% }) %>
+  </ul>
+  <% } else { %>
+  <p class="text-center text-muted">No campaigns found for this charity.</p>
+  <% } %>
+</div>
+
+<%- include('../partials/footer.ejs') %>

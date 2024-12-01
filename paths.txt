@@ -1,0 +1,33 @@
+├───controllers
+│   ├───auth.js
+│   └───transactions.js
+├───middleware
+│   ├───error-message.js
+│   ├───is-signed-in.js
+│   ├───success-message.js
+│   └───pass-user-to-view.js
+├───models
+│   ├───auth.js
+│   └───transaction.js
+├───public
+│   ├───Images
+│   └───stylesheets
+│       └───style.css
+├───route
+│   ├───auth.js
+│   └───transactions.js
+└───views
+    ├───auth
+    │   ├───sign-in.ejs
+    │   └───sign-in.ejs
+    ├───partials    
+    │   ├───footer.ejs
+    │   └───navbar.ejs
+    └───transactions
+        ├───index.ejs
+        ├───show.ejs
+        ├───new.ejs
+        └───change-pass.ejs
+.env
+package.json
+server.js

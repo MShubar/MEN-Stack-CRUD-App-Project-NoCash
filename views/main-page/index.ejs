@@ -1,0 +1,65 @@
+<%- include('../partials/navbar.ejs') %>
+
+<body style="height: 500px">
+  <div class="container my-5">
+    <h1 class="text-center fw-bold mb-4">Our Services</h1>
+    <div class="row">
+      <!-- Service 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img
+            src="/Images/TransactionPic.jpeg"
+            class="card-img-top"
+            style="height: 300px; width: 400px"
+            alt="Transactions"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Transactions</h5>
+            <p class="card-text">
+              Easily manage and track all your financial transactions.
+            </p>
+            <a href="/transactions/new" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Service 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img
+            src="/images/DonatePic.jpeg"
+            class="card-img-top"
+            style="height: 300px; width: 400px"
+            alt="Charity"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Charity</h5>
+            <p class="card-text">
+              Support charitable organizations effortlessly.
+            </p>
+            <a href="/charity/list" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Service 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img
+            src="/images/CampaignPic.jpeg"
+            class="card-img-top"
+            style="height: 300px; width: 400px"
+            alt="Campaign"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Campaigns</h5>
+            <p class="card-text">
+              Create or contribute to impactful campaigns.
+            </p>
+            <a href="/campaigns/list" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<div style="margin-bottom: 0px"><%- include('../partials/footer.ejs') %></div>
